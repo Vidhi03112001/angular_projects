@@ -38,7 +38,6 @@ export class AppointmentListComponent implements OnInit {
   }
 
   deleteAppointment(index: number) {
-    //he splice() method adds and/or removes array elements.
     this.appointments.splice(index, 1);
     localStorage.setItem('appointments',JSON.stringify(this.appointments))
 
