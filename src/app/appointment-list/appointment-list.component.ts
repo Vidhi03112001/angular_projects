@@ -8,13 +8,11 @@ import { OnInit } from '@angular/core';
   styleUrls: ['./appointment-list.component.css'],
 })
 export class AppointmentListComponent implements OnInit {
-  //appointment is a property
 
   newAppointmentTitle: string = '';
   newAppointmentDate: Date = new Date();
   appointments: Appointment[] = [];
 
-  //ngOnInit is commonly used to call services
   ngOnInit(): void {
     let savedAppointments=localStorage.getItem("appointments");
     this.appointments =savedAppointments ? JSON.parse(savedAppointments) : [];
